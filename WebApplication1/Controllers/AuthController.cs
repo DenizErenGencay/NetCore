@@ -31,7 +31,6 @@ namespace WebApplication1.Controllers
                 if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any()) 
                 {
                     identityResult = await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
-                    
                     if (identityResult.Succeeded)
                     {
                         return Ok("User Registered, please Login.");
