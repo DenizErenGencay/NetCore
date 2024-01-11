@@ -139,3 +139,4 @@ C:\Users\denizge\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\A
 C:\Users\denizge\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\denizge\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\denizge\source\repos\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\denizge\source\repos\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
