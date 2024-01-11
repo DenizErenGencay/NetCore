@@ -6,6 +6,7 @@ using WebApplication1.Models.Domain;
 using WebApplication1.Repositories;
 using WebApplication1.CustomActionsFilters;
 using Microsoft.AspNetCore.Authorization;
+using System.Text.Json;
 
 namespace WebApplication1.Controllers
 {
@@ -34,7 +35,9 @@ namespace WebApplication1.Controllers
         [Authorize(Roles = "Reader, Writer")]
         public async Task<IActionResult> GetAll()
         {
+            logger.LogInformation("GetAllRegions Action Method was invoked");
             var regionsDomain = await regionRepository.GetAllAsync();
+            logger.LogInformation($"Finished GetAllRegions request with data: {JsonSerializer.Serialize(regionsDomain)}");
             return Ok(mapper.Map<List<RegionDto>>(regionsDomain));
         }
 
