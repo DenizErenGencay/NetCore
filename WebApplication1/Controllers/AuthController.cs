@@ -55,22 +55,16 @@ namespace WebApplication1.Controllers
             if (user != null)
             {
                 var checkPasswordResult = await userManager.CheckPasswordAsync(user, loginRequestDto.Password);
-
                 if (checkPasswordResult)
                 {
                     var roles = await userManager.GetRolesAsync(user);
-
                     if (roles != null)
                     {
-                        // Create Token
-
                         var jwtToken = tokenRepository.CreateJWTToken(user, roles.ToList());
-
                         var response = new LoginResponseDto
                         {
                             JwtToken = jwtToken
                         };
-
                         return Ok(response);
                     }
                 }
